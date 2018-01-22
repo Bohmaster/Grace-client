@@ -1,0 +1,14 @@
+<div class="library">
+    <div class="_3 cent txtinicio">Courses Info</div>
+    <div class="w-row" ng-repeat="c in courses" style="margin-bottom: 10px;">
+      <div class="w-col w-col-4"><img src="images/course1.jpg">
+      </div>
+      <div class="w-col w-col-8">
+        <div class="txtlibrary">{{c.date | date}}</div>
+        <div class="txtlibrary">{{c.name}}</div>
+        <div class="txtlibrary">{{c.description}}</div>
+        <a class="contactinicio info w-button" ng-click="goToRoom(c)">Go to classroom</a>
+      </div>
+    </div>
+    
+  </div>

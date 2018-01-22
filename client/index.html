@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com -->
+<!--  Last Published: Thu Apr 20 2017 21:19:30 GMT+0000 (UTC)  -->
+<html data-wf-page="586ab860178e94b41cccb5f2" data-wf-site="586ab860178e94b41cccb5f1" ng-app="real-time">
+<head>
+  <meta charset="utf-8">
+  <title>plataforma</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/plataformac.webflow.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="toast/ngToast.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+  <script type="text/javascript">
+    WebFont.load({
+      google: {
+        families: ["Varela:400","Lato:100,100italic,300,300italic,400,400italic,700,700italic,900,900italic","Muli:200,regular,700italic","Baloo Chettan:regular","Mandali:regular"]
+      }
+    });
+  </script>
+  <script src="js/modernizr.js" type="text/javascript"></script>
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+
+  <style>
+    .navbar {
+      position: fixed !important;
+    }
+  </style>
+</head>
+<body> 
+  <toast></toast> 
+  <div class="navbar w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+    <a class="brand w-nav-brand" href="#"><img src="images/logoPlataforma.png">
+    </a>
+    <div class="divizq w-clearfix">
+      <nav class="navmenu w-clearfix w-nav-menu" role="navigation">
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
+        </div>
+        <a class="navlink w-nav-link" ui-sref="app.home">Home</a>
+        <a class="navlink w-nav-link" ui-sref="app.courses">Courses</a>
+        <a class="navlink w-nav-link" href="library.html">Library</a>
+        <a class="navlink w-nav-link" href="info.html">Courses Info</a>
+      </nav>
+    </div>
+  </div>
+
+  <ui-view></ui-view>
+  
+  <div class="footer2">
+    <div class="w-row">
+      <div class="w-col w-col-4"><a class="izq txtfooter" href="#">Home</a><a class="izq txtfooter" href="#">Courses</a><a class="izq txtfooter" href="#">Library</a><a class="izq txtfooter" href="info.html">Courses info</a>
+      </div>
+      <div class="w-col w-col-4"><img class="logofooter" src="images/logoPlataforma.png" width="185">
+        <div class="txtfooter">+54 9 341 6895 455</div>
+        <div class="txtfooter">Rosario, Santa Fe, Argentina.</div>
+      </div>
+      <div class="w-clearfix w-col w-col-4">
+        <div class="divsocial">
+          <div class="der txtfooter">Share</div>
+          <div class="divfilter">
+            <div class="w-embed w-script">
+              <!--  AddToAny BEGIN  -->
+              <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                <a class="a2a_button_facebook"></a>
+                <a class="a2a_button_twitter"></a>
+                <a class="a2a_button_google_plus"></a>
+                <a class="a2a_button_whatsapp"></a>
+              </div>
+              <script async="" src="https://static.addtoany.com/menu/page.js"></script>
+              <!--  AddToAny END  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+
+  <!-- Settings -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
+    <script src="toast/ngToast.min.js"></script>
+
+  <!-- App config -->
+    <script src="js/main.js"></script>
+    <script src="js/lb-services.js"></script>
+</body>
+</html>

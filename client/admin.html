@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>My First Admin</title>
+    <link rel="stylesheet" href="css/ng-admin.min.css">
+  </head>
+  <body ng-app="myApp">
+    <div ui-view="ng-admin"></div>
+    <script src="js/ng-admin.min.js"></script>
+    <script type="text/javascript">
+    var API_URL = 'http://localhost:3000/api/';
+
+    var myApp = angular.module('myApp', ['ng-admin']);
+
+    myApp.config(['NgAdminConfigurationProvider', function (nga) {
+        // create an admin application
+        var admin = nga.application('Administrador Connections')
+        .baseApiUrl(API_URL); // main API endpoint
+        // create a student entity
+        // the API endpoint for this entity will be 'http://jsonplaceholder.typicode.com/students/:id
+        var student = nga.entity('Students');
+        var course = nga.entity('Courses');
+        var teacher = nga.entity('Teachers');
+        // set the fields of the student entity list view
+        student.listView().fields([
+            nga.field('name'),
+            nga.field('lastname'),
+            nga.field('email')
+        ]);
+
+        student.creationView().fields([
+            nga.field('name'),
+            nga.field('lastname'),
+            nga.field('email'),
+            nga.field('password', 'password'),
+        ]);
+        // add the student entity to the admin application
+        admin.addEntity(student);
+
+        teacher.listView().fields([
+            nga.field('name'),
+            nga.field('lastname'),
+            nga.field('email')
+        ]);
+
+        teacher.creationView().fields([
+            nga.field('name'),
+            nga.field('lastname'),
+            nga.field('email'),
+            nga.field('password', 'password'),
+            nga.field('speciality')
+        ]);
+
+        admin.addEntity(teacher);
+
+        // set the fields of the student entity list view
+        course.listView().fields([
+            nga.field('name'),
+            nga.field('description'),
+            nga.field('date', 'date'),
+            nga.field('active', 'boolean'),
+            nga.field('activar', 'template')
+                .template('<activar></activar>')
+        ]);
+
+        course.creationView().fields([
+            nga.field('name'),
+            nga.field('description', 'text'),
+            nga.field('date', 'date'),
+            nga.field('active', 'boolean')
+        ]);
+        // add the student entity to the admin application
+        admin.addEntity(course);
+        // attach the admin application to the DOM and execute it
+        nga.configure(admin);
+    }]);
+
+    myApp.directive('activar', function() {
+        return {
+            restrict: 'EA',
+            template: '<button ng-click="activate()">Activar</button>',
+            controller: function($scope, $rootScope) {
+                $scope.activate = function() {
+		    console.log('Hello');	
+                    window.open('http://localhost:6767?courseId=' + $scope.entry.values.id, 'Voice', "width=500; height: 800");
+                }
+            }
+        }
+    })
+    </script>
+  </body>
+</html>

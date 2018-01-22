@@ -1,0 +1,25 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "Course": 3,
+    "Student": 1,
+    "Teacher": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "Course": {
+      "1": "{\"name\":\"Course\",\"active\":true,\"date\":\"2017-04-28T00:00:00.000Z\",\"description\":\"course\",\"id\":1,\"audioUrl\":\"http://localhost:6767/12407ec0-426b-11e7-b2dd-6d7f0a05eb9d\"}",
+      "2": "{\"name\":\"Net Consult\",\"active\":true,\"date\":\"2017-04-05T00:00:00.000Z\",\"description\":\"Simple course\",\"id\":2,\"audioUrl\":\"http://localhost:6767/ba0887d0-4269-11e7-8c08-67e3a38ca16f\"}"
+    },
+    "Student": {},
+    "Teacher": {}
+  }
+}

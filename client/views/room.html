@@ -1,0 +1,94 @@
+<!--<div ng-controller="MainController">
+        Courses: 
+        <ul>
+            <li ng-repeat="c in courses">
+                {{ c.name }} | <span ng-click="enterRoom(c)">Ingresar</span>
+            </li>
+        </ul>
+
+        <div>        {{messages}}
+</div>
+        <input type="text" ng-model="message"><button ng-click="sendMessage()">Enviar</button>
+    </div>-->
+
+<div class="course">
+    <div class="txtcourse">{{course.name}}</div>
+    <div class="txtcourse">Teacher : Emilia García</div>
+    <div class="txtcourse" style="background: black; padding: 3px; color: yellow; float: right;" ng-click="voicePlease(course.audioUrl)">INICIAR CONVERSACION</div>
+    <div class="divcourse w-clearfix">
+      <div class="divinfo w-clearfix">
+        <div class="divalllog">
+          <div class="encabezado">Logged in</div>
+          <div class="divlogeados">
+            <div class="msjs txtblackboard">
+                <h4>Graciela Cuello</h4>
+                <div ng-repeat="user in users">
+                    {{user}}
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="divallaudio">
+          <div class="encabezado">Information</div>
+          <div class="divaudio">
+            <div class="msjs txtblackboard">Thursday, January 26th, 2017
+              <br>15:28 pm
+              <br>
+              <br>Course : MC2 Initial level
+              <br>Days : Tuesday, Thursday
+              <br>Schedule : start 15:30 pm to 16:30 pm</div>
+          </div>
+        </div>
+      </div>
+      <div class="divchat">
+        <div class="encabezado">Messages to the teacher</div>
+        <div class="contxtsend">
+          <div class="msjenviados">
+            <div class="msjs txtblackboard">
+                <div ng-repeat="m in messages">
+                    {{ m }}
+                </div>
+            </div>
+          </div>
+          <div class="divsendtxt">
+            <div class="formwrapper w-form">
+              <form class="form"  id="email-form-2" >
+                <input class="message w-input" id="field" ng-model="message" maxlength="256" name="field" placeholder="Send message to the teacher" required="required" type="text">
+                <input class="send w-button" data-wait="Please wait..." type="submit" ng-click="sendMessage()" value="Send">
+              </form>
+              <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divallblackboard">
+      <div class="encabezado">Blackboard</div>
+      <div class="divblackboard">
+        <div class="txtblackboard">
+            <dif ng-repeat="m in teacher">
+                <div> {{m}} </div>
+            </dif>
+        </div>
+      </div>
+      <div class="divsendtxt">
+        <div class="formwrapper w-form">
+          <form class="form" id="email-form-2">
+            <input class="message w-input"  id="field-2" maxlength="256" ng-model="teacherField" name="field-2" placeholder="Send message to blackboard" required="required" type="text">
+            <input class="send w-button" data-wait="Please wait..." ng-click="teacherTalks()" type="submit" value="Send">
+          </form>
+          <div class="w-form-done">
+            <div>Thank you! Your submission has been received!</div>
+          </div>
+          <div class="w-form-fail">
+            <div>Oops! Something went wrong while submitting the form</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>    
