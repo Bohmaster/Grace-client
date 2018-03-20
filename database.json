@@ -16,7 +16,7 @@
     "RoleMapping": {},
     "Role": {},
     "Course": {
-      "1": "{\"name\":\"Course\",\"active\":true,\"date\":\"2017-04-28T00:00:00.000Z\",\"description\":\"course\",\"id\":1,\"audioUrl\":\"http://localhost:6767/12407ec0-426b-11e7-b2dd-6d7f0a05eb9d\"}",
+      "1": "{\"name\":\"Course\",\"active\":true,\"date\":\"2017-04-28T00:00:00.000Z\",\"description\":\"course\",\"id\":1,\"audioUrl\":\"http://localhost:6767/475b6400-2959-11e8-a94e-5d0e844ced74\"}",
       "2": "{\"name\":\"Net Consult\",\"active\":true,\"date\":\"2017-04-05T00:00:00.000Z\",\"description\":\"Simple course\",\"id\":2,\"audioUrl\":\"http://localhost:6767/ba0887d0-4269-11e7-8c08-67e3a38ca16f\"}"
     },
     "Student": {},

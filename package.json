@@ -17,6 +17,7 @@
     "loopback-datasource-juggler": "^2.39.0",
     "ng-admin": "^1.0.5",
     "serve-favicon": "^2.0.1",
+    "socket.io": "^2.0.4",
     "strong-error-handler": "^1.0.1"
   },
   "devDependencies": {
