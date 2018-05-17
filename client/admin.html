@@ -8,9 +8,11 @@
     <div ui-view="ng-admin"></div>
     <script src="js/ng-admin.min.js"></script>
     <script type="text/javascript">
-    var API_URL = 'http://localhost:3000/api/';
+    var API_URL = 'http://connections-si.com:3003/api/';
 
     var myApp = angular.module('myApp', ['ng-admin']);
+
+    
 
     myApp.config(['NgAdminConfigurationProvider', function (nga) {
         // create an admin application
@@ -73,6 +75,7 @@
         admin.addEntity(course);
         // attach the admin application to the DOM and execute it
         nga.configure(admin);
+        
     }]);
 
     myApp.directive('activar', function() {
@@ -81,8 +84,7 @@
             template: '<button ng-click="activate()">Activar</button>',
             controller: function($scope, $rootScope) {
                 $scope.activate = function() {
-		    console.log('Hello');	
-                    window.open('http://localhost:6767?courseId=' + $scope.entry.values.id, 'Voice', "width=500; height: 800");
+
                 }
             }
         }

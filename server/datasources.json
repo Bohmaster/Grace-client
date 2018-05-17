@@ -2,6 +2,6 @@
   "db": {
     "name": "db",
     "connector": "memory",
-    "file": "database.json"
+    "file": "fuckme.json"
   }
 }

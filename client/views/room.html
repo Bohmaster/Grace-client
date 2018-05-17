@@ -11,7 +11,7 @@
         <input type="text" ng-model="message"><button ng-click="sendMessage()">Enviar</button>
     </div>-->
 
-<div class="course">
+<!-- <div class="course">
     <div class="txtcourse">{{course.name}}</div>
     <div class="txtcourse">Teacher : Emilia García</div>
     <div class="txtcourse" style="background: black; padding: 3px; color: yellow; float: right;" ng-click="voicePlease(course.audioUrl)">INICIAR CONVERSACION</div>
@@ -71,9 +71,9 @@
       <div class="encabezado">Blackboard</div>
       <div class="divblackboard">
         <div class="txtblackboard">
-            <dif ng-repeat="m in teacher">
+            <div ng-repeat="m in teacher">
                 <div> {{m}} </div>
-            </dif>
+            </div>
         </div>
       </div>
       <div class="divsendtxt">
@@ -91,4 +91,75 @@
         </div>
       </div>
     </div>
-  </div>    
+  </div>     -->
+
+  <div class="course">      
+      <input id="sessionInput" ng-model="course.name" style="display: none;"/>
+      <button type="submit" id="activar" ng-click="activateCourse()">Activar curso</button>
+      <button style="display: inline;" id="screenShareButton">Compartir pantalla</button>
+
+
+    <div class="wrapper">
+      <div class="arriba">
+        <div class="row-3 w-row">
+          <div class="column-4 w-col w-col-3">
+            <div class="titsec">Info</div>
+            <div class="info2">
+              <div class="txtcourse">{{course.name}}</div>
+              <div class="txtcourse">Teacher : Emilia García</div>
+              <div class="txtblackboard msjs">Thursday, January 26th, 2017<br>15:28 pm<br><br>Days : Tuesday, Thursday<br>Schedule : start 15:30 pm to 16:30 pm</div>
+            </div>
+          </div>
+          <div class="column-5 w-col w-col-6">
+              
+            <div class="video" id="remotes"></div>
+          </div>
+          <div class="column-6 w-col w-col-3">
+            <div class="titsec">Logged in</div>
+            <div class="logged">
+              <div class="txtblackboard msjs">Supervisor : Graciela Cuello<br>Teacher : Emilia García &lt;<br>Pupil : Gustavo Trovant &lt;<br>Pupil : Ramiro Trovant</div>
+              <div ng-repeat="user in users">
+                {{user}}
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="abajo">
+        <div class="row-4 w-row">
+          <div class="column-7 w-col w-col-6">
+            <div class="blackboard">
+              <div class="titsec">Blackboard</div>
+              <div class="bboard">
+                  <div ng-repeat="m in teacher">
+                      <div> {{m}} </div>
+                  </div>
+                  
+              </div>
+              <div class="contsend w-clearfix"><a class="botonsend w-button" ng-click="teacherTalks()">Send</a>
+                <div class="sendmsje">
+                  <input ng-model="teacherField" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column-8 w-col w-col-6">
+            <div class="chat">
+              <div class="titsec">Messages to the instructor</div>
+              <div class="bboard">
+                  <div ng-repeat="m in messages">
+                      {{ m }}
+                  </div>
+              </div>
+              <div class="msjs"></div>
+              <div class="contsend w-clearfix"><a class="botonsend w-button" ng-click="sendMessage()">Send</a>
+                <div class="sendmsje">
+                  <input ng-model="message" type="text" >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
